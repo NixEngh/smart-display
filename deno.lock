@@ -11,6 +11,7 @@
     "npm:autoprefixer@^10.4.20": "10.4.20_postcss@8.4.47",
     "npm:class-variance-authority@0.7": "0.7.0",
     "npm:clsx@^2.1.1": "2.1.1",
+    "npm:date-fns@^4.1.0": "4.1.0",
     "npm:lucide-react@0.456": "0.456.0_react@18.3.1",
     "npm:postcss@^8.4.47": "8.4.47",
     "npm:react-dom@^18.3.1": "18.3.1_react@18.3.1",
@@ -694,6 +695,9 @@
     },
     "data-uri-to-buffer@4.0.1": {
       "integrity": "sha512-0R9ikRb668HB7QDxT1vkpuUBtqc53YyAwMwGeUFKRojY/NWKvdZ+9UYtRfGmhqNbRkTSVpMbmyhXipFFv2cb/A=="
+    },
+    "date-fns@4.1.0": {
+      "integrity": "sha512-Ukq0owbQXxa/U3EGtsdVBkR1w7KOQ5gIBqdH2hkvknzZPYvBxb/aa6E8L7tmjFtkwZBu3UXBbjIgPo/Ez4xaNg=="
     },
     "debug@4.3.7": {
       "integrity": "sha512-Er2nc/H7RrMXZBFCEim6TCmMk02Z8vLC2Rbi1KEBggpo0fS6l0S1nnapwmIi3yW/+GOJap1Krg4w0Hg80oCqgQ==",
@@ -1663,6 +1667,7 @@
       "npm:autoprefixer@^10.4.20",
       "npm:class-variance-authority@0.7",
       "npm:clsx@^2.1.1",
+      "npm:date-fns@^4.1.0",
       "npm:lucide-react@0.456",
       "npm:postcss@^8.4.47",
       "npm:react-dom@^18.3.1",
