@@ -35,7 +35,7 @@ export function Timetable({
   const calls = data.stopPlace.estimatedCalls;
 
   return (
-    <div className="flex flex-col text-primary-foreground bg-slate-950 p-2 w-full h-full overflow-scroll-y">
+    <div className="flex flex-col text-primary-foreground bg-slate-950 p-2 w-full h-full overflow-auto">
       <h1 className="p-1 font-semibold text-3xl">{data.stopPlace.name}</h1>
 
       <table className="text-left w-full">
