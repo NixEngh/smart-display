@@ -32,10 +32,10 @@ export function Timetable({
     return <div>No data available</div>;
   }
 
-  const calls = data.stopPlace.estimatedCalls.slice(0, 6);
+  const calls = data.stopPlace.estimatedCalls;
 
   return (
-    <div className="flex flex-col text-primary-foreground bg-slate-950 p-2 w-full h-full overflow-hidden">
+    <div className="flex flex-col text-primary-foreground bg-slate-950 p-2 w-full h-full overflow-scroll-y">
       <h1 className="p-1 font-semibold text-3xl">{data.stopPlace.name}</h1>
 
       <table className="text-left w-full">
@@ -61,28 +61,30 @@ export function Timetable({
                 call.serviceJourney.journeyPattern.line.id,
               );
 
-              const checkType = type === "all" ||
+              const checkType =
+                type === "all" ||
                 (type === "tram" && lineNumber === "1") ||
                 (type === "bus" && lineNumber !== "1");
 
               return checkTimeDifference && checkType;
             })
+            .slice(0, 10)
             .map((call: EstimatedCall) => {
               const timeDifference = getTimeDifferenceInMinutes(
                 call.expectedArrivalTime,
               );
 
-              const displayTime = timeDifference < 15 ||
-                  call.expectedArrivalTime !== call.aimedArrivalTime
-                ? `${timeDifference} min`
-                : formatTime(call.expectedArrivalTime);
+              const displayTime =
+                timeDifference < 15 ||
+                call.expectedArrivalTime !== call.aimedArrivalTime
+                  ? `${timeDifference} min`
+                  : formatTime(call.expectedArrivalTime);
 
               const routeID = extractRouteNumber(
                 call.serviceJourney.journeyPattern.line.id,
               );
 
-              const uniqueKey =
-                `${call.expectedArrivalTime}-${routeID}-${call.destinationDisplay.frontText}`;
+              const uniqueKey = `${call.expectedArrivalTime}-${routeID}-${call.destinationDisplay.frontText}`;
 
               return (
                 <tr key={uniqueKey} className="h-10">
