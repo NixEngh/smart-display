@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for smart-display2-muddy-flower-9376 on 2024-11-12T02:34:42+01:00
+# fly.toml app configuration file generated for smart-display on 2024-11-12T13:22:17+01:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'smart-display2-muddy-flower-9376'
+app = 'smart-display'
 primary_region = 'arn'
 
 [build]
