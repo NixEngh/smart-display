@@ -61,8 +61,7 @@ export function Timetable({
                 call.serviceJourney.journeyPattern.line.id,
               );
 
-              const checkType =
-                type === "all" ||
+              const checkType = type === "all" ||
                 (type === "tram" && lineNumber === "1") ||
                 (type === "bus" && lineNumber !== "1");
 
@@ -74,17 +73,17 @@ export function Timetable({
                 call.expectedArrivalTime,
               );
 
-              const displayTime =
-                timeDifference < 15 ||
-                call.expectedArrivalTime !== call.aimedArrivalTime
-                  ? `${timeDifference} min`
-                  : formatTime(call.expectedArrivalTime);
+              const displayTime = timeDifference < 15 ||
+                  call.expectedArrivalTime !== call.aimedArrivalTime
+                ? `${timeDifference} min`
+                : formatTime(call.expectedArrivalTime);
 
               const routeID = extractRouteNumber(
                 call.serviceJourney.journeyPattern.line.id,
               );
 
-              const uniqueKey = `${call.expectedArrivalTime}-${routeID}-${call.destinationDisplay.frontText}`;
+              const uniqueKey =
+                `${call.expectedArrivalTime}-${routeID}-${call.destinationDisplay.frontText}`;
 
               return (
                 <tr key={uniqueKey} className="h-10">

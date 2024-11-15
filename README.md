@@ -1,5 +1,7 @@
 # Kollektiv Dashboard
-Viser avganger ved de nærmeste stoppene, været og hvem som skal vaske denne uken.
+
+Viser avganger ved de nærmeste stoppene, været og hvem som skal vaske denne
+uken.
 
 ## Running
 
